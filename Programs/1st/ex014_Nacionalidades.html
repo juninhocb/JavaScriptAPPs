@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nacionalidades</title>
+    <style>
+        body{
+            background-color: black;
+            color: azure;
+            font: normal 20pt Arial;
+        }
+        p.ok {
+            background-color: aqua;
+            color: rgb(25, 202, 99);
+        }
+        p.no {
+            background-color: aqua;
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <h1> Nacionalidades</h1>
+    Qual a sua nacionalidade? <input type="text" id="nac">
+    <input type="button" name="get" id="get" onclick="func()">
+    
+    <div id="getNac"> 
+
+    </div>
+    <script>
+        window.confirm("Bem vindo!");
+        var nac2 = window.prompt("Digite a sua nacionalidade");
+        if (nac2 == 'Brasil') {
+            document.write(`A nacionalidade pelo prompt é <strong> Brasileira <strong/>`);
+        } else { 
+            document.write(`A nacionalidade pelo prompt é estrangeira, sendo ela ${nac2} `);
+        }
+
+        function func(){
+            var get; 
+            get = window.document.querySelector('div#getNac');
+            var nac; 
+            nac = window.document.getElementById('nac');
+            var n = nac.value;
+            get.innerHTML = `<p> A Sua nacionalidade é <strong> ${n} <strong/> <p/>` 
+            if (n == 'Brasil'){
+                get.innerHTML += `<p class="ok"> Voçê é Brasileiro <p/>`; 
+            } else {
+                get.innerHTML += `<p class="no"> Voçê é Estrangeiro <p/>`;
+            }
+        }
+    </script>
+
+</body>
+</html>

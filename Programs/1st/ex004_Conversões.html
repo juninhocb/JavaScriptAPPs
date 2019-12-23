@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conversões</title>
+    <style>
+        body{
+            background-color: lawngreen;
+            color: maroon;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Conversão de Tipos
+    </h1>
+   <p> Conversão </p>
+   <p>Number.parseInt(n) -> converte para INTEGER</p>
+   <p>Number.parseFloat(n) -> converte para FLOAT</p>
+   <p>Number(n) -> o próprio JavaScript reconhece o tipo e converte</p>
+   <p>String(n)</p>
+   <p>n.toString()</p>
+   <p>n.length -> quantos carácteres a string possui</p>
+   <p>n.toUpperCase() -> string vira maiscula</p>
+   <p>n.toLowerCase()-> string vira minuscula</p>
+    <script>
+        var n1 = Number.parseFloat(window.prompt("Digite um número")); 
+        // window prompt retorna uma string
+        var n2 = Number.parseFloat(window.prompt("Digite um outro número"));
+        var s = n1 + n2; 
+        //window.alert("A soma dos valores é "+ s.toString());
+        //window.alert("A soma dos valores é "+ String(s));
+        // utilização de place holder (template strings)
+        // entre crases e ${}
+        window.alert(`A soma dos valores ${n1} e ${n2} é ${s}`);
+
+   </script> 
+
+</body>
+</html>

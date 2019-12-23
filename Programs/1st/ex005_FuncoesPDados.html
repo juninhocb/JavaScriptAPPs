@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Comando Write</title>
+    <style>
+        body{
+            background-color: maroon;
+            color: mediumblue;
+            font: normal 20pt Arial;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>
+        Comandos Write
+    </h1>
+    <p> A cráse aceita comandos em HTML também</p>
+    <p> Exemplo Abaixo com o comando Strong para deixar o nome em negrito e BR(break row)</p>
+    <p> Para escolhermos o número de casasa decimais após a virgula de uma variavel numerica utilziaremos o comando toFixed(valor de casos)</p>
+    <p> Para trocar um ponto por uma virgula utilizamos o comando toFixed().replace()</p>
+    <p> Para Representar o valor em Reais por exemplo, n.toLocaleString('pt-BR', 'currency', currency:'BRL'); </p>
+    <script>
+        var nome = window.prompt("Qual é o seu nome?");
+        document.write(`Seu nome possui ${nome.length} letras. <br/>`);
+        document.write(`Seu nome é: <strong>${nome}</strong> <br/>`);
+        document.write(`Seu nome em Maisculo é: ${nome.toUpperCase()}<br/>`);
+        document.write(`Seu nome em Minusculo é: ${nome.toLowerCase()}<br/>`);
+        var n1 = 3.42
+        document.write(`O numero com 3 casas decimais é: ${n1.toFixed(3)}<br/>`);
+        var n2 = 3.35345565
+        document.write(`O numero grande com 4 casas decimais aproximando a quinta é: ${n2.toFixed(4)}<br/>`);
+        document.write(`O numero representado com virgula é: ${n1.toFixed(4).replace('.', ',')}<br/>`);
+        document.write(`Em reais temos: ${n2.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})} <br/>`);
+        document.write(`Em dólares temos: ${n2.toLocaleString('pt-BR', {style: 'currency', currency:'USD'})} <br/>`);
+        document.write(`Em euros temos: ${n2.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})}`);
+    </script>
+</body>
+</html>

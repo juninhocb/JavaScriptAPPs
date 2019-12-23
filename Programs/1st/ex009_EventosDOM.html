@@ -1,0 +1,84 @@
+ <!DOCTYPE html>
+ <html lang="pt-BR">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Eventos DOM</title>
+     <style>
+         body{
+                background: chartreuse;
+                color:chocolate;
+                font: normal 20pt Arial;
+         }
+         div#area{
+            font: normal 20pt Arial;
+            background-color: darkgreen;
+            color: white;
+            width:  200px;
+            height: 200px;
+            line-height:  200px;
+            text-align: center;
+         }
+         div#areaB{
+            font: normal 20pt Arial;
+            background-color: darkgreen;
+            color: white;
+            width:  200px;
+            height: 200px;
+            line-height:  200px;
+            text-align: center;
+         }
+     </style>
+ </head>
+ <body>
+     <h1>Eventos MOUSE</h1>
+     <p> 'mosueenter', 'mousemove', 'mousedown', 'mouseup', 'click', 'mouseout'</p>
+     <p> criação de blocos -> function nome_ação(param) { bloco }/p>
+    <div id= "area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> Interaja</div>
+    <div id= "areaB"> Interajir 2  </div>
+    <script>
+         var area = window.document.getElementById('area');
+         var a = window.document.getElementById('area');
+         a = addEventListener('click', clicar);
+         a = addEventListener('mouseenter', entrar);
+         a = addEventListener('mouseout', sair);
+        /*
+         function clicar(){
+             area.innerText = 'Clicou!!!';
+             area.style.background = 'red';
+
+         }
+         function entrar(){
+             area.innerText = 'Entrou!';
+             area.style.background = 'blue';
+
+         }
+         
+         function sair(){
+            area.innerText = 'Saiu!!!';
+            area.style.background = 'darkgreen';
+
+         }
+         */
+         function clicar(){
+             a.innerText = 'Clicou 2!!!';
+             a.style.background = 'blue';
+
+         }
+         function entrar(){
+             a.innerText = 'Entrou!';
+             a.style.background = 'purple';
+
+         }
+         
+         function sair(){
+            a.innerText = 'Saiu!!!';
+            a.style.background = 'darkgreen';
+
+         }
+         
+
+     </script>
+    </body>
+ </html>

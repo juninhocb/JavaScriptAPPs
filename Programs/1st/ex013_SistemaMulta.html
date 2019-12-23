@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sistema de Multas</title>
+    <style>
+        body{
+            background-color: aqua;
+            color: darkmagenta;
+        }
+        p{ 
+            background-color: blue;
+            color: chartreuse;
+        }
+        p#areaB{
+            background-color: black;
+            color: red;
+            }   
+        p#areaA {
+            background-color: black;
+            color: green;
+        }     
+    </style>
+</head>
+<body>
+    <h1> Sistema de Multas</h1>
+    Velocidade do Carro: <input type="number" name="txtvel" id="txtvel"> Km/h
+    <input type="button" id="Verificar" onclick="calcular()">
+    <div class="res">
+
+
+    </div> 
+    <script>
+        //var txtv = window.document.querySelector('input#txtvel');
+        function calcular() {
+            var txtv = window.document.getElementById('txtvel');
+            var vel = Number.parseInt(txtv.value);
+            var res = window.document.querySelector('div.res'); 
+            res.innerHTML = `<p> Sua velocidade é de <strong> ${vel}KM/h </strong></p>` 
+            if (vel > 60){
+                res.innerHTML += ` <p id="areaB"> Voçê está <strong> MULTADO <strong/> por excesso de velocidade <p/>`
+
+            } else {
+                res.innerHTML += `<p id= "areaA"> Voce está dentro do limite de velocidade <p/>`
+
+            }
+            res.innerHTML += `<p> Dirija sempre com o cinto de segurança! <p/>`  
+        }
+    
+    </script>
+</body>
+</html>

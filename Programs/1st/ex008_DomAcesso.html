@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dom Acesso</title>
+    <style> 
+        body{
+            background-color: blueviolet;
+            color: cornsilk;
+            font: normal 20pt Arial; 
+        }
+    </style>
+</head>
+<body>
+    <h1> Dom Acesso </h1>
+    <p> 5 metodos de acesso ao <strong>DOM </strong> </p>
+    <p> Quando for Elements ao inves de Element, requer [n] indicando qual elemento pegar</p>
+    <p> Marca -> getElementsByTagName()</p>
+    <p> ID -> getElementById() </p>
+    <p> Nome -> getElementsByName()</p>
+    <p> Classe -> getElementsByClassName()</p>
+    <p> Seletor -> Query selector </p>
+    <div id="msg"> Mensagem  </div>
+    <div name="msg2"> Mensagem div 2 </div>
+    <div class="msg3"> Mensagem div 3 </div>
+    <div class = "msg4"> Mensagem div 4 Selector</div>
+    <div id = "msg5"> Mensagem div 5 Selector</div>
+    <script>
+        // irá pegar por marca, o primeiro parágrafo -> [0] 
+        var p1 = window.document.getElementsByTagName('p')[0];
+        var corpo = window.document.body;
+        window.document.write('Primeiro parágrafo: ' + p1.innerText) + '<br/>';
+        p1.style.color = 'blue'        
+        corpo.style.background = 'black';
+
+        document.write(p1.innerHTML);
+        //window.alert(p1.innerText);
+
+        // POR ID 
+        var d = window.document.getElementById('msg');
+        d.style.background = 'green';
+        d.innerText = 'Mensagem trocada';
+
+        // POR NOME
+        var n = window.document.getElementsByName('msg2')[0];
+        n.style.background = 'blue';
+        n.innerText = 'Mensagem trocada 2';
+
+        // POR CLASS
+        var c = window.document.getElementsByClassName('msg3')[0];
+        c.innerText = 'Mensagem Trocada 3';
+        c.style.background = 'purple';
+
+        // POR QUERY
+        var q1 = window.document.querySelector('div.msg4');
+        q1.innerText = 'Mensagem Trocada 4';
+        q1.style.color = 'red';
+
+        var q2 = window.document.querySelector('div#msg5');
+        q2.style.background = 'blue';
+        q2.style.color = 'red';
+
+
+    </script>        
+
+</body>
+</html>

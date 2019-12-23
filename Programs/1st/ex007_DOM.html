@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Entendendo o DOM</title>
+    <style>
+        body{
+            background-color: olive;
+            color: orangered;
+            font: normal 20pt Arial; 
+        }
+        p { 
+            color: blue;
+        }
+        div {
+            color:cornsilk;
+        }
+    </style>
+</head>
+<body>
+    <h1> Entendendo o DOM(Document Object Model)</h1>
+    <p> Dom -> Modelo para documentos, conjunto de objetos dentro do navegador que lhe da acesso aos componentes do navegador</p>
+    <p> Arvore DOM -> window (Raiz) -> dentro do window temos varios objetos como location(qual pagina), document(documento atual) e history(pra onde vai, onde estava) </p>
+    <img src="images/logo.jpg" alt="some text" width=600 height=400>
+    <p> dentro de document temos HTML que tem Head e Body</p>
+    <p> dentro de Head temos meta, title</p>
+    <p> dentro de Body temos h1, p( que tem Strong), div </p>
+    <p> Aprendendo usar o <strong>DOM</strong> em JS</p>
+    <div> Clique em Mim </div>
+    <script>
+        window.document.write('Olá Mundo <br/>');
+        window.document.write(window.navigator.appName+ '<br/>');
+        window.document.write(window.document.charset + '<br/>');    
+        window.document.write(window.document.URL);
+    </script>
+    
+</body>
+</html>

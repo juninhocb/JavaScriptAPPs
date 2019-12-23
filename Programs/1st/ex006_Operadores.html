@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Operadores</title>
+    <style> 
+        body{
+            background-color: mediumorchid;
+            color: midnightblue;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1> Operadores do JS</h1>
+    <p> Fámilias principais </p>
+    <p> Aritiméticos -> '+, -, *, /, %, **' % resto da divisão inteira e ** potência do numero (ao quadrado) </p>
+    <p> Atribuição </p>
+    <p> Relacionais -> '>, <, >=, <=, ==, !=', ===(retorna se até o tipo é igual), retornam true e false</p>
+    <p> Lógicos -> '!', '&&', '||' negação, e, ou </p>
+    <p> ordem dos operadores -> Aritimeticos -> Relacionais -> Lógicos</p>
+    <p> Ternário -> ? e : (teste, true, false), o que vai acontecer se for vdd, o que vai acontecer ser for falso </p>
+    <script>
+        var a = 5+3;
+        document.write('A vale: '+ a + '<br/>');
+        var b = 5 % 2; 
+        document.write(`A divisão entre 5 e 2 retorna um resto ${b}<br/>`);
+        var c  = a < b; 
+        document.write(`a é menor que b? ${c} <br/>`);
+        var d = true;
+        document.write(`O operador lógico E entre ${c} ou ${d}, nos retorna ${c || d} <br/>`);
+        document.write(`O operador lógico E entre ${c} e ${d}, nos retorna ${c && d} <br/>`);
+        var nota = 6; 
+        var aprov = nota >= 6 ?'Aprovado':'Reprovado'; 
+        document.write(`Uma nota ${nota}, é uma nota ${aprov} <br/> `)
+        document.write(`A nota 4 é uma nota ${4 >= 6?'Aprovado':'Reprovado'}`);
+
+    </script>
+    
+</body>
+</html>
